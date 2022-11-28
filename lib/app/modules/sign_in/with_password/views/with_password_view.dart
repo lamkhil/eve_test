@@ -9,6 +9,7 @@ import 'package:get/get.dart';
 import '../../../../global/constant/image.dart';
 import '../../../../global/constant/theme.dart';
 import '../../../../global/widget/button.dart';
+import '../../../../global/widget/text_form.dart';
 import '../controllers/with_password_controller.dart';
 
 class WithPasswordView extends GetView<WithPasswordController> {
@@ -26,7 +27,7 @@ class WithPasswordView extends GetView<WithPasswordController> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               header(),
-              textFormWithLabel(
+              TextFormWithLabel(
                   controller: controller.emailController,
                   label: "Email",
                   isImportance: true,
@@ -36,7 +37,7 @@ class WithPasswordView extends GetView<WithPasswordController> {
                 height: 12.h,
               ),
               Obx(
-                () => textFormWithLabel(
+                () => TextFormWithLabel(
                     controller: controller.passwordController,
                     label: "Password",
                     isImportance: true,
@@ -172,49 +173,6 @@ class WithPasswordView extends GetView<WithPasswordController> {
     );
   }
 
-  Column textFormWithLabel(
-      {required String label,
-      bool obscureText = false,
-      bool isImportance = false,
-      TextEditingController? controller,
-      Widget? prefix,
-      Widget? suffix,
-      String? hint}) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            children: [
-              Text(label,
-                  style:
-                      Get.textTheme.bodyText1!.copyWith(color: ColorsApp.grey)),
-              isImportance
-                  ? Text(
-                      "*",
-                      style: Get.textTheme.bodyText2!.copyWith(
-                        color: Colors.red,
-                      ),
-                    )
-                  : const SizedBox.shrink(),
-            ],
-          ),
-        ),
-        TextFormField(
-          obscureText: obscureText,
-          controller: controller,
-          decoration: InputDecoration(
-              filled: true,
-              prefixIcon: prefix,
-              suffixIcon: suffix,
-              hintText: hint),
-        )
-      ],
-    );
-  }
-
   Column header() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -246,7 +204,7 @@ class WithPasswordView extends GetView<WithPasswordController> {
       children: [
         Obx(
           () => Text(
-            controller.isSignUp
+            !controller.isSignUp
                 ? "Don’t have a account?"
                 : "Already have a account?",
             style: Get.textTheme.bodyText1!.copyWith(color: ColorsApp.grey),
@@ -260,7 +218,7 @@ class WithPasswordView extends GetView<WithPasswordController> {
             padding: const EdgeInsets.all(8.0),
             child: Obx(
               () => Text(
-                controller.isSignUp ? "Sign up" : "Sign in",
+                !controller.isSignUp ? "Sign up" : "Sign in",
                 style:
                     Get.textTheme.headline4!.copyWith(color: ColorsApp.purple),
               ),

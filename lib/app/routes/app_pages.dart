@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
+import '../modules/home/edit_profile/bindings/edit_profile_binding.dart';
+import '../modules/home/edit_profile/views/edit_profile_view.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/sign_in/bindings/sign_in_binding.dart';
 import '../modules/sign_in/views/sign_in_view.dart';
@@ -24,6 +26,13 @@ class AppPages {
       name: _Paths.HOME,
       page: () => const HomeView(),
       binding: HomeBinding(),
+      children: [
+        GetPage(
+          name: _Paths.EDIT_PROFILE,
+          page: () => const EditProfileView(),
+          binding: EditProfileBinding(),
+        ),
+      ],
     ),
     GetPage(
       name: _Paths.SPLASH,
@@ -37,8 +46,7 @@ class AppPages {
       transition: Transition.fadeIn,
       children: [
         GetPage(
-          transition: Transition.downToUp,
-          transitionDuration: const Duration(milliseconds: 800),
+          transition: Transition.rightToLeftWithFade,
           name: _Paths.WITH_PASSWORD,
           page: () => const WithPasswordView(),
           binding: WithPasswordBinding(),

@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "579805485866-3tpok6cf0bo8m3t9rnnr1m003nanjrg0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lamkhil.eve_test",
+            "certificate_hash": "b8600852dc2e4457de5bbf5ec99a62daf0b0e28c"
+          }
+        },
+        {
           "client_id": "579805485866-d7uhnruecpppf3vu5uqhtm1dcnqfpb83.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,6 +37,13 @@
             {
               "client_id": "579805485866-d7uhnruecpppf3vu5uqhtm1dcnqfpb83.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "579805485866-lb41b0sv3b8o84l11vg96f4toodqg99d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lamkhil.eveTest"
+              }
             }
           ]
         }

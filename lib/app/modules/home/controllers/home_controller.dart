@@ -1,23 +1,12 @@
+import 'package:eve_test/app/global/widget/loading.dart';
+import 'package:eve_test/app/routes/app_pages.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
-
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  void logout() async {
+    LoadingDialog.basic();
+    await FirebaseAuth.instance.signOut();
+    Get.offAllNamed(Routes.SIGN_IN);
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

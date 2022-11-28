@@ -63,6 +63,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '579805485866',
     projectId: 'eve-lam',
     storageBucket: 'eve-lam.appspot.com',
+    androidClientId: '579805485866-3tpok6cf0bo8m3t9rnnr1m003nanjrg0.apps.googleusercontent.com',
     iosClientId: '579805485866-lb41b0sv3b8o84l11vg96f4toodqg99d.apps.googleusercontent.com',
     iosBundleId: 'com.lamkhil.eveTest',
   );

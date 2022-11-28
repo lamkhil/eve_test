@@ -31,14 +31,18 @@ class SignInView extends GetView<SignInController> {
                     height: 12.h,
                   ),
                   socialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        controller.authenticateFacebook();
+                      },
                       image: ImageApps.facebookLogo,
                       title: "Facebook"),
                   SizedBox(
                     height: 12.h,
                   ),
                   socialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        controller.authenticateGoogle();
+                      },
                       image: ImageApps.googleLogo,
                       title: "Google"),
                   SizedBox(
@@ -46,7 +50,9 @@ class SignInView extends GetView<SignInController> {
                   ),
                   Platform.isIOS
                       ? socialButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            controller.authenticateApple();
+                          },
                           image: ImageApps.appleLogo,
                           title: "Apple")
                       : const SizedBox.shrink(),
