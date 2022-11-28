@@ -1,0 +1,30 @@
+name: eve_test
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=2.18.4 <3.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  get: 4.6.5
+  firebase_core: 2.3.0
+  google_sign_in: 5.4.2
+  flutter_screenutil: 5.6.0
+  flutter_spinkit: 5.1.0
+  social_login_buttons: 1.0.7
+  flutter_iconly: 1.0.2
+  firebase_auth: 4.1.4
+  flutter: 
+    sdk: flutter
+
+dev_dependencies: 
+  flutter_lints: ^2.0.0
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  assets: 
+    - assets/
+  uses-material-design: true
+

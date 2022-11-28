@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "579805485866",
+    "project_id": "eve-lam",
+    "storage_bucket": "eve-lam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579805485866:android:7e008d6efcf22c0fa71c53",
+        "android_client_info": {
+          "package_name": "com.lamkhil.eve_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579805485866-d7uhnruecpppf3vu5uqhtm1dcnqfpb83.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOaFCvmltlW8pwp5er_P7xv2yZqv2FJM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579805485866-d7uhnruecpppf3vu5uqhtm1dcnqfpb83.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
